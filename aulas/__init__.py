@@ -43,6 +43,7 @@ class Cena(Scene):
         texto = TextMobject(título).scale(escala)
         self.play(Write(texto, run_time=tempo))
         self.wait(espera)
+        return texto
 
 
 class TabelaDeDefinições(Cena):

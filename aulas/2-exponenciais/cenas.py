@@ -130,7 +130,7 @@ class RecapitulandoIQuadrado(Cena):
         self.wait(4)
 
 
-TabelaDeDefinições.definições.update({"Número": "Uma abstração dos conceitos de intensidade e sentido.",
+TabelaDeDefinições.definições.update({"Número": "Uma abstração dos conceitos de intensidade e sentido. \\\\",
                                       "Soma": "Resultado da Mistura de Quantidades.",
                                       "Multiplicação": "Adição repetida.",
                                       "Potência": "Multiplicação repetida."})
@@ -311,3 +311,115 @@ class ExponencialComplexa(Cena):
         self.ir_para_(-20)
 
         self.wait(5)
+
+
+class CircunferênciaComplexa(Cena):
+    def construct(self):
+        plano = ComplexPlane()
+        referência = plano.get_coordinate_labels().copy()
+        self.play(ShowCreation(plano), Write(referência), run_time=3)
+
+        ponto = Dot(RIGHT, color=YELLOW)
+        caminho = Arc(angle=PI)
+
+        def conseguir_arco_a_partir_do_(ponto):
+            x, y, _ = ponto.get_center()
+            if x >= 0:
+                return np.arctan(y/x)
+            elif x < 0:
+                return np.arctan(y/x) + PI
+
+        indicador_de_b = TexMobject("b =").scale(1.5)
+        b = DecimalNumber(0,
+                          show_ellipsis=True,
+                          num_decimal_places=5,
+                          include_sign=True,
+                          ).scale(1.5
+                          ).add_updater(lambda x: x.next_to(indicador_de_b)
+                          ).add_updater(lambda x: x.set_value(conseguir_arco_a_partir_do_(ponto)))
+
+        indicador_do_expoente = TexMobject("e^{bi}").add_background_rectangle().add_updater(lambda x: x.next_to(ponto))
+
+        self.play(ShowCreation(ponto))
+        self.add_foreground_mobject(ponto)
+        self.play(Write(VGroup(indicador_de_b, b).center().to_edge(UP).add_background_rectangle()),
+                  Write(indicador_do_expoente))
+
+        self.play(Rotate(ponto, PI, about_point=ORIGIN),
+                  ShowCreation(caminho),
+                  run_time=15,
+                  rate_func=linear)
+        self.wait(4)
+
+        indicador_de_teta = TexMobject("\\theta =").scale(1.5).move_to(indicador_de_b)
+        indicador_do_expoente_teta = TexMobject("e^{\\theta i}"
+                                     ).add_background_rectangle(
+                                     ).move_to(indicador_do_expoente)
+
+        self.play(Transform(indicador_de_b, indicador_de_teta),
+                  Transform(indicador_do_expoente, indicador_do_expoente_teta),
+                  run_time=3)
+
+
+class CircunferênciaTrigonométrica(Cena):
+    def construct(self):
+        plano = ComplexPlane().scale(2)
+        referência = plano.get_coordinate_labels().copy()
+        self.play(ShowCreation(plano), Write(referência), run_time=3)
+
+        self.wait(1)
+
+        circunferência = Circle(radius=2, color=WHITE)
+        self.play(ShowCreation(circunferência))
+
+        ponto = Dot(2*RIGHT, color=YELLOW)
+        self.play(ShowCreation(ponto))
+        self.add_foreground_mobject(ponto)
+        self.play(Rotate(ponto, PI/3, about_point=ORIGIN),
+                  Write(TexMobject("\\theta = \\pi/3").scale(1.5).to_edge(UP).add_background_rectangle()))
+        self.play(ShowCreation(Line(ORIGIN, (v := ponto.get_center()))))
+
+        self.wait(3)
+
+        self.play(ShowCreation(DashedLine(v, v[1]*UP)))
+
+        self.wait(3)
+
+        self.play(ShowCreation(DashedLine(v, v[0]*RIGHT)))
+
+        self.wait(3)
+
+        self.play(ShowCreation(Line(2*(RIGHT + 5*DOWN), 2*(RIGHT + 5*UP))))
+        self.wait()
+        self.play(ShowCreation(Line(v, 10*v)),
+                  ShowCreation(Dot(2*v, color=YELLOW)))
+
+        self.wait(3)
+
+        self.play(ShowCreation(Line(2*(UP+ 5*LEFT), 2*(UP + 5*RIGHT))))
+        self.play(ShowCreation(Dot(2*(UP + (1/np.tan(PI/3))*RIGHT), color=YELLOW)))
+
+        self.wait(3)
+
+        self.play(ShowCreation(Line(cossec := 2*(1/np.sin(PI/3))*UP, sec := 2*(1/np.cos(PI/3))*RIGHT)))
+        self.wait()
+        self.play(ShowCreation(Dot(sec, color=YELLOW)))
+        self.wait()
+        self.play(ShowCreation(Dot(cossec, color=YELLOW)))
+
+        self.wait(3)
+
+
+class Poincaré(Cena):
+    def construct(self):
+        título = self.título_de_seção("Poincaré", escala=3, espera=0)
+        novo_título = título.copy()
+        citação = TextMobject('"Notação importa"').next_to(novo_título, DOWN)
+
+        VGroup(novo_título, citação).center()
+        self.play(Transform(título, novo_título),
+                  Write(citação),
+                  runt_time=2)
+
+
+
