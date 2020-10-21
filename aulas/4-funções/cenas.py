@@ -4,7 +4,70 @@ sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 
 from manimlib.imports import *
 
-from aulas import TabelaDeDefinições, Cena
+from aulas import Cena
+
+
+class ConstruindoFunção(Cena):
+    def construct(self):
+        esquerda = TextMobject("$x$ é um $\\mathbb{R}^{+}$")
+        flecha = TexMobject("\\mapsto").next_to(esquerda, RIGHT)
+        direita = TextMobject("$v$ é um $\\mathbb{R}^{+}$").next_to(flecha, RIGHT)
+
+        for elem in VGroup(esquerda, flecha, direita).center():
+            if elem != flecha:
+                self.play(Write(elem))
+
+        self.wait(3)
+
+        self.play(Transform(esquerda, TexMobject("x \\in \\mathbb{R}^{+}").move_to(esquerda)),
+                  Transform(direita, TexMobject("v \\in \\mathbb{R}^{+}").move_to(direita)),
+                  run_time=3)
+
+        self.wait(3)
+
+        setA = VGroup(regionA := Circle(color=WHITE, radius=0.35).next_to(flecha, LEFT),
+                      element_in_A := TexMobject("x").move_to(regionA),
+                      setA_label := TexMobject("\\mathbb{R}^{+}").next_to(regionA, UP))
+        setB = VGroup(regionB := Circle(color=WHITE, radius=0.35).next_to(flecha, RIGHT),
+                      element_in_B := TexMobject("v").move_to(regionB),
+                      setB_label := TexMobject("\\mathbb{R}^{+}").next_to(regionB, UP))
+
+        self.play(Transform(esquerda, setA),
+                  Transform(direita, setB),
+                  run_time=3)
+
+        self.wait(3)
+
+        self.play(Write(flecha))
+
+        self.wait(3)
+
+        f = TexMobject("f").scale(1.2).move_to(VGroup(setA_label, setB_label)).shift(0.1*DOWN)
+        função = CurvedArrow(start_point=setA_label.get_corner(UR),
+                             end_point=setB_label.get_corner(UL),
+                             angle=-2*PI/3,
+                             stroke_width=1.5,
+                             tip_length=0.15)
+        self.play(Write(função), run_time=2)
+        self.play(Write(f), run_time=2)
+
+        self.wait(3)
+
+
+class EntendendoFunção(Cena):
+    def construct(self):
+        intuição = TextMobject("processos").scale(2)
+
+        self.play(Write(intuição), run_time=1.5)
+        self.wait(3)
+
+        self.play(Transform(intuição, TextMobject("relações entre formas").scale(2)),
+                  run_time=1.5)
+        self.wait(3)
+
+        self.play(Transform(intuição, TextMobject("morfismos").scale(2)),
+                  run_time=1.5)
+        self.wait(3)
 
 
 class FunçãoMindBlown(ThreeDScene):
