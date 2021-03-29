@@ -1,0 +1,2 @@
+file 'file:C:/Users/gusta/PycharmProjects/remat/magnus/aulas/1. Introdução à matemática e à ideia de número/media/videos/animações_aula_1/1440p60/partial_movie_files/Abstração/00000.mp4'
+file 'file:C:/Users/gusta/PycharmProjects/remat/magnus/aulas/1. Introdução à matemática e à ideia de número/media/videos/animações_aula_1/1440p60/partial_movie_files/Abstração/00001.mp4'
