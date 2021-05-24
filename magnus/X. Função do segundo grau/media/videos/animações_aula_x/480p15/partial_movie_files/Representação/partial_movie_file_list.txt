@@ -1,0 +1,5 @@
+file 'file:C:/Users/gusta/PycharmProjects/remat/magnus/X. Função do segundo grau/media/videos/animações_aula_x/480p15/partial_movie_files/Representação/00000.mp4'
+file 'file:C:/Users/gusta/PycharmProjects/remat/magnus/X. Função do segundo grau/media/videos/animações_aula_x/480p15/partial_movie_files/Representação/00001.mp4'
+file 'file:C:/Users/gusta/PycharmProjects/remat/magnus/X. Função do segundo grau/media/videos/animações_aula_x/480p15/partial_movie_files/Representação/00002.mp4'
+file 'file:C:/Users/gusta/PycharmProjects/remat/magnus/X. Função do segundo grau/media/videos/animações_aula_x/480p15/partial_movie_files/Representação/00003.mp4'
+file 'file:C:/Users/gusta/PycharmProjects/remat/magnus/X. Função do segundo grau/media/videos/animações_aula_x/480p15/partial_movie_files/Representação/00004.mp4'
