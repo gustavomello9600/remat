@@ -1,0 +1,7 @@
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/1440p60/partial_movie_files/DemonstraçãoDeSimetria2/00000.mp4'
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/1440p60/partial_movie_files/DemonstraçãoDeSimetria2/00001.mp4'
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/1440p60/partial_movie_files/DemonstraçãoDeSimetria2/00002.mp4'
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/1440p60/partial_movie_files/DemonstraçãoDeSimetria2/00003.mp4'
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/1440p60/partial_movie_files/DemonstraçãoDeSimetria2/00004.mp4'
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/1440p60/partial_movie_files/DemonstraçãoDeSimetria2/00005.mp4'
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/1440p60/partial_movie_files/DemonstraçãoDeSimetria2/00006.mp4'

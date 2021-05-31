@@ -1,0 +1,6 @@
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/1440p60/partial_movie_files/IntroduçãoAParabola/00000.mp4'
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/1440p60/partial_movie_files/IntroduçãoAParabola/00001.mp4'
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/1440p60/partial_movie_files/IntroduçãoAParabola/00002.mp4'
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/1440p60/partial_movie_files/IntroduçãoAParabola/00003.mp4'
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/1440p60/partial_movie_files/IntroduçãoAParabola/00004.mp4'
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/1440p60/partial_movie_files/IntroduçãoAParabola/00005.mp4'

@@ -1,0 +1,2 @@
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/720p30/partial_movie_files/Simetria/00000.mp4'
+file 'file:E:/Gustavo/remat/magnus/10. Circunferência/media/videos/animações_circunferência/720p30/partial_movie_files/Simetria/00001.mp4'
